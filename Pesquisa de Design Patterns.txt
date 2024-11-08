@@ -1,0 +1,36 @@
+	1. O que são padrões de projeto
+
+Padrões de projeto são soluções reutilizáveis para problemas comuns que surgem durante o desenvolvimento de software. Eles representam melhores práticas que foram refinadas ao longo do tempo por desenvolvedores experientes e são projetados para serem aplicados em diferentes contextos e situações. Padrões de projeto ajudam a criar código mais organizado, flexível e fácil de manter, facilitando a comunicação entre desenvolvedores ao fornecer uma linguagem comum para descrever soluções.
+
+------
+
+	2. Quais as vantagens em utilizar padrões de projeto
+
+As principais vantagens de utilizar padrões de projeto incluem:
+
+Reusabilidade: Padrões de projeto permitem que soluções comprovadas sejam reutilizadas, reduzindo o tempo de desenvolvimento.
+Manutenção: Padrões bem aplicados tornam o código mais organizado e fácil de manter, pois seguem estruturas reconhecidas.
+Flexibilidade: Eles ajudam a criar sistemas flexíveis que podem ser facilmente modificados ou estendidos.
+Comunicação: Oferecem uma linguagem comum que facilita a comunicação entre desenvolvedores e melhora a compreensão do código.
+Redução de erros: Usar padrões testados e comprovados pode ajudar a evitar erros comuns no design de software.
+
+------
+
+	3. Características do Padrão de Projeto Strategy e quando é indicado aplicá-lo
+
+O padrão de projeto Strategy é um padrão comportamental que permite definir uma família de algoritmos, encapsulá-los em classes separadas e torná-los intercambiáveis. O Strategy permite que o algoritmo varie independentemente dos clientes que o utilizam. Isso significa que você pode alterar ou adicionar novos algoritmos sem modificar o código que os utiliza.
+
+
+Características:
+
+Encapsulamento de Algoritmos: Cada algoritmo é encapsulado em uma classe concreta que implementa uma interface comum.
+Intercambialidade: Os algoritmos podem ser trocados durante a execução sem alterar o código do cliente.
+Composição ao invés de Herança: O padrão favorece a composição sobre a herança, permitindo a escolha de comportamentos em tempo de execução.
+
+--
+
+Quando aplicar:
+
+Quando você tem uma classe que define muitos comportamentos e esses comportamentos variam com base em condições específicas.
+Quando você deseja evitar o uso de uma grande quantidade de condicionais (if-else ou switch-case) que selecione o comportamento desejado.
+Quando diferentes variantes de um algoritmo precisam ser trocadas em tempo de execução ou precisam ser reutilizadas em outros contextos.
