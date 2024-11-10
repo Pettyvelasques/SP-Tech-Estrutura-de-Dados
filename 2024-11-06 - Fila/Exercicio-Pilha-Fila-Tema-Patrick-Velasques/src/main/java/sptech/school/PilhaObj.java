@@ -5,8 +5,8 @@
         private int topo;
 
         public PilhaObj(int capacidade) {
-            pilha = (T[]) new Object[capacidade];
-            topo = -1;
+            this.pilha = (T[]) new Object[capacidade];
+            this.topo = -1;
         }
 
         public boolean isEmpty() {
@@ -18,23 +18,27 @@
         }
 
         public void push(T elemento) {
-            if (!isFull()) {
-                pilha[++topo] = elemento;
+            if(isFull()){
+                throw new IllegalStateException("Pilha Cheia");
             }
-        }
-
-        public T pop() {
-            return isEmpty() ? null : pilha[topo--];
+            pilha[++topo] = elemento;
         }
 
         public T peek() {
             return isEmpty() ? null : pilha[topo];
         }
 
+        public T pop() {
+            return isEmpty() ? null : pilha[topo--];
+        }
+
+
         public void exibir() {
+            StringBuilder retorno = new StringBuilder("{ ");
             for (int i = topo; i >= 0; i--) {
-                System.out.print(pilha[i] + " ");
+                retorno.append(pilha[i]).append(" ");
             }
-            System.out.println();
+            retorno.append("}");
+            System.out.println(retorno);
         }
     }

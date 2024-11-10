@@ -79,4 +79,16 @@ public class Atleta {
     public String toString() {
         return String.format("%-5d %-10s %-5d %-7.2f %-7.2f %-10s %-5s", id, nome, idade, peso, altura, esporte, ativo ? "Sim" : "Não");
     }
+    public void exibir(){
+        System.out.println("{ " +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", peso=" + peso +
+                ", altura=" + altura +
+                ", esporte='" + esporte + '\'' +
+                ", ativo=" + ativo +
+                " }");
+    }
+
 }
